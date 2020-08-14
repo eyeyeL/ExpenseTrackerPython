@@ -2,8 +2,8 @@
 # Customized expense tracker, which also allows user to keep track of expense shared with other people! In addition, automatically create expenses that are recurring every month.
 
 
-#Connect to database
-import mysql.connector
+
+import mysql.connector                                                    #Connect to database
 mydb = mysql.connector.connect(host='localhost',database='testdb',user='root',password='', autocommit=True)
 mycursor = mydb.cursor()
 import datetime                                                          #datetime module
