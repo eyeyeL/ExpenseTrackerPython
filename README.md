@@ -1,20 +1,14 @@
 # ExpenseTracker
 # Customized expense tracker, which also allows user to keep track of expense shared with other people! In addition, automatically create expenses that are recurring every month.
 
+
 #Connect to database
 import mysql.connector
 mydb = mysql.connector.connect(host='localhost',database='testdb',user='root',password='', autocommit=True)
 mycursor = mydb.cursor()
-
-
 import datetime                                                          #datetime module
 import calendar                                                          #calendar module
-
-
 from prettytable import PrettyTable                                      #import pretty table module for command line data table
-
-
-
 
 class Expense:
     def __init__(self):
@@ -30,7 +24,6 @@ class Expense:
         self.name = ""
         #editted 23/6/2020: add user_id
         self.user_id = ""
-
 
     #calculate the amount shared with other people
     def calc_amount_per_person(self):
